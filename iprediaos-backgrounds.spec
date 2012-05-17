@@ -1,43 +1,55 @@
-Name:		
-Version:	
+%global iprediaos_release_name winston
+%global IprediaOS_Release_Name Winston
+Name:		%{iprediaos_release_name}-backgrounds
+Version:	1
 Release:	1%{?dist}
-Summary:	
+Summary:	%{IprediaOS_Release_Name} desktop backgrounds
 
-Group:		
-License:	
-URL:		
-Source0:	
+Group:		Applications/Multimedia
+License:	CC-BY-SA
+URL:		http://ipredia.org
+Source0:	%{iprediaos_release_name}.png
 BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 
-BuildRequires:	
-Requires:	
+BuildArch:	noarch
+
+#BuildRequires:	
+#Requires:	
 
 %description
+This package contains desktop backgrounds for the IprediaOS theme.
 
+%package        single
+Summary:        Single screen images for IprediaOS Backgrounds
+Group:          Applications/Multimedia
+License:        CC-BY-SA
+
+%description    single
+This package contains single screen images for IprediaOS Backgrounds
 
 %prep
-%setup -q
+#%setup -q
 
 
 %build
-%configure
-make %{?_smp_mflags}
 
 
 %install
 rm -rf $RPM_BUILD_ROOT
-make install DESTDIR=$RPM_BUILD_ROOT
 
+# Install background
+mkdir -p $RPM_BUILD_ROOT/usr/share/backgrounds/%{iprediaos_release_name}/default/standard
+cp %{SOURCE0} $RPM_BUILD_ROOT/usr/share/backgrounds/%{iprediaos_release_name}/default/standard/ 
 
 %clean
-rm -rf $RPM_BUILD_ROOT
 
 
-%files
+%files single
 %defattr(-,root,root,-)
 %doc
-
+%{_datadir}/backgrounds/%{iprediaos_release_name}/default/standard/%{iprediaos_release_name}.png
 
 
 %changelog
-
+* Tue May 17 2012 Mattias Ohlsson <mattias.ohlsson@inprose.com> - 1-1
+- Initial package
