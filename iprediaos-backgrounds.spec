@@ -29,7 +29,7 @@ This package contains single screen images for IprediaOS Backgrounds
 
 
 %package        gnome
-Summary:        Beefy Miracle Wallpapers for Gnome
+Summary:        IprediaOS Wallpapers for Gnome
 Group:          Applications/Multimedia
 
 Requires:       %{name}-single = %{version}-%{release}
