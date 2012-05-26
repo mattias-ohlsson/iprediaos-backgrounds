@@ -27,6 +27,16 @@ License:        CC-BY-SA
 %description    single
 This package contains single screen images for IprediaOS Backgrounds
 
+
+%package        gnome
+Summary:        Beefy Miracle Wallpapers for Gnome
+Group:          Applications/Multimedia
+
+Requires:       %{name}-single = %{version}-%{release}
+
+%description    gnome
+This package contains Gnome desktop wallpapers for the IprediaOS theme. 
+
 %prep
 #%setup -q
 
@@ -48,6 +58,10 @@ cp %{SOURCE0} $RPM_BUILD_ROOT/usr/share/backgrounds/%{iprediaos_release_name}/de
 %defattr(-,root,root,-)
 %doc
 %{_datadir}/backgrounds/%{iprediaos_release_name}/default/standard/%{iprediaos_release_name}.png
+
+%files gnome
+%{_datadir}/backgrounds/%{iprediaos_release_name}/default/%{iprediaos_release_name}.xml
+%{_datadir}/gnome-background-properties/desktop-backgrounds-%{iprediaos_release_name}.xml
 
 
 %changelog
