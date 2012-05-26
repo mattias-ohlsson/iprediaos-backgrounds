@@ -12,11 +12,11 @@
 <duration>10000000000.0</duration>
 <file>
 	<!-- Wide 16:10 -->
-	<!-- <size width="1920" height="1200">/usr/share/backgrounds/verne/default/wide/verne.png</size> -->
+	<!-- <size width="1920" height="1200">/usr/share/backgrounds/winston/default/wide/winston.png</size> -->
 	<!-- Standard 4:3 -->
-	<size width="2048" height="1536">/usr/share/backgrounds/verne/default/standard/verne.png</size>
+	<size width="2048" height="1536">/usr/share/backgrounds/winston/default/standard/winston.png</size>
 	<!-- Normalish 5:4 -->
-	<!-- <size width="1280" height="1024">/usr/share/backgrounds/verne/default/normalish/verne.png</size> -->
+	<!-- <size width="1280" height="1024">/usr/share/backgrounds/winston/default/normalish/winston.png</size> -->
 </file>
 </static>
 
