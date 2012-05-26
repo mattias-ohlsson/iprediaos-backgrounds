@@ -9,6 +9,8 @@ Group:		Applications/Multimedia
 License:	CC-BY-SA
 URL:		http://ipredia.org
 Source0:	%{iprediaos_release_name}.png
+Source1: 	%{iprediaos_release_name}.xml
+Source2: 	desktop-backgrounds-%{iprediaos_release_name}.xml
 BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 
 BuildArch:	noarch
@@ -50,6 +52,9 @@ rm -rf $RPM_BUILD_ROOT
 # Install background
 mkdir -p $RPM_BUILD_ROOT/usr/share/backgrounds/%{iprediaos_release_name}/default/standard
 cp %{SOURCE0} $RPM_BUILD_ROOT/usr/share/backgrounds/%{iprediaos_release_name}/default/standard/ 
+cp %{SOURCE1} $RPM_BUILD_ROOT/usr/share/backgrounds/%{iprediaos_release_name}/default/
+cp %{SOURCE2} $RPM_BUILD_ROOT/usr/share/gnome-background-properties/
+
 
 %clean
 
