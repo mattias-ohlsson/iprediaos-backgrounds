@@ -53,6 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT/usr/share/backgrounds/%{iprediaos_release_name}/default/standard
 cp %{SOURCE0} $RPM_BUILD_ROOT/usr/share/backgrounds/%{iprediaos_release_name}/default/standard/ 
 cp %{SOURCE1} $RPM_BUILD_ROOT/usr/share/backgrounds/%{iprediaos_release_name}/default/
+mkdir -p $RPM_BUILD_ROOT/usr/share/gnome-background-properties
 cp %{SOURCE2} $RPM_BUILD_ROOT/usr/share/gnome-background-properties/
 
 
