@@ -1,7 +1,7 @@
 %global iprediaos_release_name winston
 %global IprediaOS_Release_Name Winston
 Name:		%{iprediaos_release_name}-backgrounds
-Version:	1
+Version:	1.1
 Release:	1%{?dist}
 Summary:	%{IprediaOS_Release_Name} desktop backgrounds
 
@@ -71,5 +71,8 @@ cp %{SOURCE2} $RPM_BUILD_ROOT/usr/share/gnome-background-properties/
 
 
 %changelog
+* Mon Jul 9 2012 Mattias Ohlsson <mattias.ohlsson@inprose.com> - 1.1-1
+- Fix for wide screens
+
 * Tue May 17 2012 Mattias Ohlsson <mattias.ohlsson@inprose.com> - 1-1
 - Initial package
